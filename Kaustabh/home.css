@@ -20,6 +20,7 @@ body{
     width: auto;
     padding: 0 12vmax;
     display: flex;
+    justify-content: space-between;
 }
 
 .logo{
@@ -63,7 +64,30 @@ body{
     font-size: 14px;
 }
 
-/*================= Search Bar =============== */
+/*================= Icons =============== */
+.icons{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
 
+}
+
+.icons a{
+    color: #153E8C;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.icons a:hover{
+    /* color: white;
+    background-color: #153E8C; */
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
 
 
