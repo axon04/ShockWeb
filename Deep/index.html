@@ -5,25 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tab-Section</title>
     <link rel="stylesheet" href="style.css">
-    <script src="tab.js"></script>
+    
 </head>
 <body>
   <!-- Tab links -->
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Annoucements')">Annoucements</button>
-    <button class="tablinks" onclick="openCity(event, 'Events')">Events</button>
-  </div>
+    <div class="btn-box"> 
+      <div class="button">
+        <button class="tablinks" onclick="openTab(event, 'Annoucements')">Annoucements</button>  
+      </div>
+      <div class="button">
+        <button class="tablinks" onclick="openTab(event, 'Events')">Events</button>
+      </div>
+      
+    </div>
+  
+  
   
   <!-- Tab content -->
-  <div id="Annoucements" class="tabcontent">
-    <h3>Annoucements</h3>
-    <p class="animate">TechFiesta 2k24 starting on 08 April</p>
-  </div>
+    <div id="Annoucements" class="tabcontent">
+      <div class="animate">
+          <div class="tabcontentinfo">
+            <pre>
+              <a href="#">TechFiesta 2k24 starting on 08 April</a>
+              <hr>
+              <a href="#">Refund of Caution Deposit for 2022 students</a>
+              <hr>
+              <a href="#">Publication of Results of the Odd Semester Examination</a>
+              <hr>
+              <a href="#">Rescheduled Routine of MCA 1st and 2nd Semester students</a>
+              <hr>
+              <a href="#">Notice on From fillup for Regular & Backlog Students for Odd Semester</a>
+              <hr>
+            </pre>
+          </div>
+      </div>
+    
+      
+    </div>
   
-  <div id="Events" class="tabcontent">
-    <h3>Events</h3>
-    <p class="animate">TechFiesta 2k24 starting on 08 April</p>
-  </div>
-  
+    <div id="Events" class="tabcontent">
+      <div class="animate">
+        <p>TechFiesta 2k24 starting on 10 April</p>
+        <p>TechFiesta 2k24 starting on 10 April</p>
+        <p>TechFiesta 2k24 starting on 10 April</p>
+        <p>TechFiesta 2k24 starting on 10 April</p>
+        <p>TechFiesta 2k24 starting on 10 April</p>
+      </div>
+    </div>
+</div>
+<script src="tab.js"></script>
 </body>
 </html>
