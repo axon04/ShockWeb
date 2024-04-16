@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Inter';
   background-color: bisque;
 }
 
@@ -40,10 +41,10 @@ body {
 .button:hover::after {
   transform: scaleX(1);
 }
-.button:hover::after, .button.active::after{
+/*.button:hover::after, .button:focus:after,.button.active::after{
   width: 100%;
- 
-}
+  left: 0;
+}*/
 
 
 .btn-box button{
@@ -60,16 +61,16 @@ body {
 .tabcontent{
   display: none;
   text-align: left;
-  padding: 6px 12px;
+  padding: 30px 15px;
   animation: fadeEffect 1s;
 }
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-.announcement {
-  max-width: 600px;
-  margin: auto;
+
+.tabcontent pre{
+  font-family: 'Inter';
 }
 
 .animate {
@@ -84,10 +85,21 @@ body {
       transform: translateY(0);
   }
 }
-hr {
-  width: 80%;
+hr  {
+  width: 87%;
   height: auto;
+  
+  
 }
 .tabcontentinfo a{
   text-decoration: none;
+}
+
+.animate .event-view {
+  display: flex;
+  justify-content: center;
+} 
+
+.animate .event-view .event-info{
+  margin: 0 2%;
 }

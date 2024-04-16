@@ -1,6 +1,6 @@
 function openTab(evt, tabName) {
     // Declare all variables
-    var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks ;
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -17,13 +17,17 @@ function openTab(evt, tabName) {
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    // evt.currentTarget.className += " active";
     
 }
-const tabs = document.querySelectorAll('.tablinks');
-tabs.forEach((tab, index)=>{
-    tab.addEventListener('click',()=>{
-        tabs.forEach(tab=>{tab.classList.remove('active')});
-        tab.classList.add('active');
-    })
-})
+// const tabs = document.querySelectorAll('.tablinks');
+// tabs.forEach((tab, index)=>{
+//     tab.addEventListener('click',()=>{
+//         tabs.forEach(tab=>{tab.classList.remove('active')});
+//         tab.classList.add('active');
+//     });
+// });
+
+window.addEventListener('load', function(e) {
+    openTab(e, 'Annoucements')
+});
