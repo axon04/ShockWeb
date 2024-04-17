@@ -6,7 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter';
-  background-color: bisque;
+  background-color: rgb(255, 235, 210);
 }
 
 
@@ -85,7 +85,7 @@ body {
       transform: translateY(0);
   }
 }
-hr  {
+.tabcontentinfo hr{
   width: 87%;
   height: auto;
   
@@ -102,4 +102,8 @@ hr  {
 
 .animate .event-view .event-info{
   margin: 0 2%;
+}
+
+.event-view .event-info a{
+  text-decoration: none;
 }
