@@ -57,6 +57,8 @@ body{
     font-size: 14px;
 }
 
+
+
 /*================= Icons =============== */
 .icons{
     font-size: 20px;
@@ -82,7 +84,32 @@ body{
     background-color: #022b7d; */
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
+@media only screen and (max-width: 768px){
+    .banner{
+        padding: 0 3vmax;
+    }
 
+    .logo{
+        min-width: 24em;
+    }
+
+    .logo img, .logo-text{
+        min-height: 2rem;
+    }
+    
+    .logo-text .main-text{
+        font-size: 16px;
+    }
+
+    .logo-text .sub-text{
+        font-size: 12px;
+    }
+
+    .icons a, .icons a i{
+        width: 0px;
+        display: none;
+    }
+}
 /*================= Search =============== */
 
 .search-container{
