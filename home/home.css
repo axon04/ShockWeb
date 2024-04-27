@@ -366,3 +366,48 @@ body{
 }
 
 /* ================================================== */
+
+.tab-container{
+    width: 100%;
+    height: 60px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-container .tab-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.tab-buttons .tab-btn{
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: #022b7d;
+    padding: 20px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+.tab-buttons .tab-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #022b7d; /* Change this color as desired */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.tab-buttons .tab-btn:hover::after,
+.tab-buttons .tab-btn.active::after {
+    width: 100%;
+    left: 0;
+}

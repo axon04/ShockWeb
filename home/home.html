@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
     <!----------------------- Banner ------------------------>
     <header>
@@ -22,13 +24,15 @@
                     <span class="sub-text">Translate your vision into reality</span>
                 </div>
             </div>
-            
-            
+
+
             <!-- Icons -->
             <div class="icons">
-                <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/aotconnect/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/"><i
+                        class="fab fa-linkedin"></i></a>
                 <!-- Search Bar -->
                 <div class="search-container">
                     <div class="search-input">
@@ -55,7 +59,7 @@
 
                 <a href="#" onclick="toggleSubDropdownMenu(event)">UG Programs
                     <i class="fa-solid fa-angle-right"></i>
-                </a>                
+                </a>
                 <div class="dropdown-sub-content" id="ug-program-submenu">
                     <a href="#">PG Programs</a>
                     <a href="#">Program Structure</a>
@@ -120,7 +124,7 @@
 
     <!---------------------- Main Body -------------------------->
     <main>
-        
+
         <!---------------------- Slider (NiladriC) -------------------------->
         <div class="slider">
             <div class="slide-wrapper">
@@ -145,16 +149,86 @@
                 <li> <h4>4TH INTERNATIONAL CONFERENCE ON COMPUTER, COMMUNICATION, CONTROL AND INFORMATION TECHNOLOGY(C3IT2024)  || </h4></li>
                 <li> <h4>ONLINE FACULTY DEVELOPMENT PROGRAM ON INTERNET OF THINGS (IOT) WITH ARTIFICIAL INTELLIGENCE (AI) AND MACHINE LEARNING (ML)  || </h4></li>
                 <li> <h4>AOT (TEAM: BUZZ 6) BAGGED THE FIRST RANK IN THE AICTE SIH 2023 || </h4></li> -->
-           </ul>
+            </ul>
         </div>
+        <!--------------------- Tabs - Announcements and Events (Deep) --------------------->
+        <section>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn" onclick="openTab(this, 'annoucements')" id="ann">ANNOUNCEMENTS</button>
+                    <button class="tab-btn" onclick="openTab(this, 'events')">EVENTS</button>
+                </div>
 
+                <div class="tab-content">
+                    <div id="annoucements" class="tabcontent">Announcements content</div>
+                    <div id="events" class="tabcontent">Events content</div>
+                </div>
+                <!-- <div id="annoucements" class="tabcontent">
+                    <div class="animate">
+                        <div class="tabcontentinfo">
+                          <pre>
+                            <a href="#">TechFiesta 2k24 starting on 08 April</a>
+                            <hr>
+                            <a href="#">Refund of Caution Deposit for 2022 students</a>
+                            <hr>
+                            <a href="#">Publication of Results of the Odd Semester Examination</a>
+                            <hr>
+                            <a href="#">Rescheduled Routine of MCA 1st and 2nd Semester students</a>
+                            <hr>
+                            <a href="#">Notice on From fillup for Regular & Backlog Students for Odd Semester</a>
+                            <hr>
+                          </pre>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div id="events" class="tabcontent">
+                    <div class="animate">
+                        <div class="event-view">
+                            <div class="event-info">
+                                <img src="download.jpeg" alt="img">
+                                <h5 class="event-date">Wednesday,08th April 2024</h5>
+                                <a href="https://aotfiesta24.tech/">
+                                    <h2 style="color: blue;">TechFiesta 2k24</h2>
+                                </a>
+                                <pre>TechFiesta is back again 5Years.
+              Join us on exciting journey.</pre>
+                            </div>
+                            <div class="event-info">
+                                <img src="download (1).jpeg" alt="img">
+                                <h5 class="event-date">Friday,20th April 2024</h5>
+                                <a href="https://aotfiesta24.tech/events/ui_ux">
+                                    <h2 style="color: blue;">UXplore 2k24</h2>
+                                </a>
+                                <pre>A UX & Product Design competition,
+              Organized by AOT-ANALECTS. Parti-
+              cipate will create their own design.  
+              </pre>
+
+                            </div>
+                            <div class="event-info">
+                                <img src="download (2).jpeg" alt="img">
+                                <h5 class="event-date">Wednesday,21th April 2024</h5>
+                                <a href="https://aotfiesta24.tech/gamesmeet">
+                                    <h2 style="color: blue;">Games Meet 2k24</h2>
+                                </a>
+                                <pre>Games Meet, Organized by AOT-AGILE.
+              Participates Must join this competition.
+              </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
 
     </main>
-    
+
     <!----------------------------- Scripts ------------------------------->
     <script defer src="nav.js"></script>
     <script defer src="home.js"></script>
     <script defer src="slide.js"></script>
+    <script defer src="tab.js"></script>
     <script type="module" src="news.js"></script>
 </body>
+
 </html>
