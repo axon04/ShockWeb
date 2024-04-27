@@ -102,3 +102,21 @@ window.onclick = function (e) {
         });
     }
 }
+
+// Burger to Cross Menu Button
+const burgerMenu = document.getElementById("burgerMenu");
+document.getElementById('menu-toggle').addEventListener('click', function(){
+  burgerMenu.classList.toggle('nav-open');
+});
+
+// Toggle Burger Menu Button
+document.getElementById("burgerMenu").addEventListener("click", function () {
+    var dropdowns = document.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].style.display === "none" || dropdowns[i].style.display === "") {
+            dropdowns[i].style.display = "block";
+        } else {
+            dropdowns[i].removeAttribute("style");
+        }
+    }
+});

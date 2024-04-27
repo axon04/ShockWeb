@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner</title>
+    <title>Academy of Technology : Home</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -47,79 +47,91 @@
         </div>
     </header>
 
-    <!---------------------- Navbar (NiladriC) -------------------------->
+    <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
     <!-- This is navbar -->
-    <nav class="navbar">
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">ACADEMICS
-                <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
-            </button>
-            <div class="dropdown-content" id="dropdown-academics">
-                <a href="#">Department</a>
+    <nav>
+        <div class="navbar">
 
-                <a href="#" onclick="toggleSubDropdownMenu(event)">UG Programs
-                    <i class="fa-solid fa-angle-right"></i>
+            <div class="burger-menu" id="burgerMenu">
+                <a id="menu-toggle" class="menu-toggle">
+                    <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
                 </a>
-                <div class="dropdown-sub-content" id="ug-program-submenu">
-                    <a href="#">PG Programs</a>
-                    <a href="#">Program Structure</a>
-                    <a href="#">Regulations</a>
-                    <a href="#">Curriculum</a>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn"
+                    onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
+                    <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-academics">
+                    <a href="#">Department</a>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)">UG Programs
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="ug-program-submenu">
+                        <a href="#">PG Programs</a>
+                        <a href="#">Program Structure</a>
+                        <a href="#">Regulations</a>
+                        <a href="#">Curriculum</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)">Resources
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="resources-submenu">
+                        <a href="#">Library</a>
+                        <a href="#">Moodle</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)">Admissions
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="admissions-submenu">
+                        <a href="#">UG Admission</a>
+                        <a href="#">PG Admission</a>
+                    </div>
+
                 </div>
+            </div>
 
-                <a href="#" onclick="toggleSubDropdownMenu(event)">Resources
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-                <div class="dropdown-sub-content" id="resources-submenu">
-                    <a href="#">Library</a>
-                    <a href="#">Moodle</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-research', 'dropicon-research')">Research
+                    <i class="fa-solid fa-angle-down" id="dropicon-research"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-research">
+                    <a href="#">Current Research</a>
+                    <a href="#">Past Research</a>
+                    <a href="#">Research Facilities</a>
                 </div>
+            </div>
 
-                <a href="#" onclick="toggleSubDropdownMenu(event)">Admissions
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-                <div class="dropdown-sub-content" id="admissions-submenu">
-                    <a href="#">UG Admission</a>
-                    <a href="#">PG Admission</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-students', 'dropicon-students')">Students
+                    <i class="fa-solid fa-angle-down" id="dropicon-students"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-students">
+                    <a href="#">Life@AOT</a>
+                    <a href="#">Campus Facilities</a>
+                    <a href="#">Career Services</a>
+                    <a href="#">Events</a>
                 </div>
-
             </div>
-        </div>
 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-research', 'dropicon-research')">RESEARCH
-                <i class="fa-solid fa-angle-down" id="dropicon-research"></i>
-            </button>
-            <div class="dropdown-content" id="dropdown-research">
-                <a href="#">Current Research</a>
-                <a href="#">Past Research</a>
-                <a href="#">Research Facilities</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-faculty', 'dropicon-faculty')">Faculty
+                    <i class="fa-solid fa-angle-down" id="dropicon-faculty"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-faculty">
+                    <a href="#">Faculty List</a>
+                    <a href="#">Faculty Positions</a>
+                    <a href="#">Career Benefits@AOT</a>
+                </div>
             </div>
-        </div>
 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-students', 'dropicon-students')">STUDENTS
-                <i class="fa-solid fa-angle-down" id="dropicon-students"></i>
-            </button>
-            <div class="dropdown-content" id="dropdown-students">
-                <a href="#">Life@AOT</a>
-                <a href="#">Campus Facilities</a>
-                <a href="#">Career Services</a>
-                <a href="#">Events</a>
-            </div>
         </div>
-
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-faculty', 'dropicon-faculty')">FACULTY
-                <i class="fa-solid fa-angle-down" id="dropicon-faculty"></i>
-            </button>
-            <div class="dropdown-content" id="dropdown-faculty">
-                <a href="#">Faculty List</a>
-                <a href="#">Faculty Positions</a>
-                <a href="#">Career Benefits@AOT</a>
-            </div>
-        </div>
-
     </nav>
 
     <!---------------------- Main Body -------------------------->

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat';
     /* background-color: #022b7d; */
     background-color: #fff;
@@ -14,7 +14,7 @@ body{
 
 /*================= Banner =============== */
 
-.banner{
+.banner {
     background-color: white;
     height: 8vmin;
     width: auto;
@@ -23,7 +23,7 @@ body{
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     /* background-color: #153f8c5d; */
     height: auto;
     min-width: 30em;
@@ -33,12 +33,12 @@ body{
     gap: 2%;
 }
 
-.logo img{
+.logo img {
     max-height: 50%;
     min-height: 2.5rem;
 }
 
-.logo-text{
+.logo-text {
     max-height: 50%;
     min-height: 2.5rem;
     display: flex;
@@ -46,26 +46,26 @@ body{
     /* justify-content: space-around; */
 }
 
-.logo-text .main-text{
+.logo-text .main-text {
     font-size: 19px;
     font-weight: 500;
     color: #022b7d;
 }
 
-.logo-text .sub-text{
+.logo-text .sub-text {
     color: #818181;
     font-size: 14px;
 }
 
 /*================= Icons =============== */
-.icons{
+.icons {
     font-size: 20px;
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.icons a{
+.icons a {
     color: #022b7d;
     text-decoration: none;
     width: 36px;
@@ -77,7 +77,7 @@ body{
     transition-duration: 0.4s;
 }
 
-.icons a:hover{
+.icons a:hover {
     /* color: white;
     background-color: #022b7d; */
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
@@ -85,12 +85,12 @@ body{
 
 /*================= Search =============== */
 
-.search-container{
+.search-container {
     width: 36px;
     height: 36px;
     border-radius: 50px;
     /* background-color: #022b7d; */
-    
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -98,11 +98,11 @@ body{
     overflow: hidden;
 }
 
-.search-container:hover{
+.search-container:hover {
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
 
-.search-icon{
+.search-icon {
     font-size: 18px;
     font-weight: 200;
     cursor: pointer;
@@ -111,12 +111,12 @@ body{
     right: 9px;
 }
 
-.search-container.active{
+.search-container.active {
     width: 280px;
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
 
-.search-input{
+.search-input {
     position: relative;
     width: 200px;
     height: 36px;
@@ -127,7 +127,7 @@ body{
 
 }
 
-.search-input input{
+.search-input input {
     position: absolute;
     top: 0;
     width: 100%;
@@ -136,13 +136,14 @@ body{
     border: none;
 }
 
-/*================= Navbar (NiladriC) ====================*/
+/*================================ Navbar Starts (NiladriC) ================================*/
 
 .navbar {
     overflow: hidden;
     background-color: #022b7d;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .navbar a {
@@ -157,13 +158,12 @@ body{
 .dropdown {
     /* float: left; */
     overflow: hidden;
-    /* margin-right: 50px; */
-    margin: 0 4%;
+    margin: 0 30px;
 }
 
 .dropdown .dropbtn {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     border: none;
     outline: none;
     color: #f9c000;
@@ -174,8 +174,6 @@ body{
     cursor: pointer;
 }
 
-
-/* .navbar a:hover, */
 .dropbtn:hover {
     border-bottom: 3px #f9c000;
 }
@@ -206,12 +204,10 @@ body{
     background-color: #ddd;
 }
 
-.dropdown-content.show{
+.dropdown-content.show {
     display: block;
     opacity: 1;
 }
-
-
 
 .dropdown-sub-content {
     display: none;
@@ -227,9 +223,6 @@ body{
     display: block;
 }
 
-
-
-/* Add animated underline effect on dropdown buttons */
 .navbar .dropbtn {
     position: relative;
     text-decoration: none;
@@ -243,7 +236,8 @@ body{
     height: 3px;
     bottom: 0;
     left: 50%;
-    background-color: #f9c000; /* Change this color as desired */
+    background-color: #f9c000;
+    /* Change this color as desired */
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
@@ -252,19 +246,109 @@ body{
     width: 100%;
     left: 0;
 }
-/* ============== Original: NiladriC ================ */
-/* ============== Added by: Kaustabh ================ */
-.dropdown .dropbtn i{
-    transform: rotate(0deg);
-    transition-duration: 0.3s;
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
 }
 
-.rotated{
-    transform: rotate(90deg);
+.menu-toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 49%;
+    transform: translate(0, -50%);
+    height: 26px;
+    width: 29px;
+
+    &,
+    &:hover {
+        color: #f9c000;
+    }
+}
+
+.menu-toggle-bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #f9c000;
+    transition: all 0.3s ease;
+
+    &.menu-toggle-bar--top {
+        transform: translate(0, -8px);
+    }
+
+    &.menu-toggle-bar--bottom {
+        transform: translate(0, 8px);
+    }
+
+    .nav-open & {
+        &.menu-toggle-bar--top {
+            transform: translate(0, 0) rotate(45deg);
+        }
+
+        &.menu-toggle-bar--middle {
+            opacity: 0;
+        }
+
+        &.menu-toggle-bar--bottom {
+            transform: translate(0, 0) rotate(-45deg);
+        }
+    }
 }
 
 
-/*================= Slider (NiladriC) ====================*/
+@media screen and (max-width: 768px) {
+    .dropdown {
+        margin: 0 2px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dropdown {
+        display: none;
+        margin-bottom: 20px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+/*================================ Navbar Ends (NiladriC) ================================*/
+
+
+
+/*=============================== Slider Starts (NiladriC) ===============================*/
+
 .slider {
     width: 100%;
     overflow: hidden;
@@ -302,27 +386,31 @@ body{
     }
 }
 
-/* ================================================== */
+/*=============================== Slider Ends (NiladriC) ===============================*/
+
+
 
 /*================= News Bulletin (Ananya) (modified) ====================*/
 .marquee {
     width: 100%;
-	line-height: 50px;
-	background-color: #252525cb;
-	color: white;
+    line-height: 50px;
+    background-color: #252525cb;
+    color: white;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
     top: -54px;
 }
 
-.marquee ul{
-    display:flex;
+.marquee ul {
+    display: flex;
     list-style: none;
-    
+
     /* Custom properties */
-    --d: 60s; /* duration */
-    --s: 0.9; /* speed-factor */
+    --d: 60s;
+    /* duration */
+    --s: 0.9;
+    /* speed-factor */
 
     animation: marquee var(--d) linear infinite, marquee calc(var(--d)/var(--s)) linear infinite reverse paused;
     animation-composition: add;
@@ -330,44 +418,50 @@ body{
     /* transition: --s 2s ease; */
 }
 
-.marquee ul:hover{
+.marquee ul:hover {
     animation-play-state: running;
     /* --s: 1; */
 }
 
-.marquee ul li, .list a h4{
+.marquee ul li,
+.list a h4 {
     white-space: nowrap;
-    padding:2px 4px;
-    color:white;
-    position:relative;
+    padding: 2px 4px;
+    color: white;
+    position: relative;
     text-decoration: none;
 }
 
-.list a{
+.list a {
     text-decoration: none;
 }
 
-.list a h4:hover{
+.list a h4:hover {
     color: #f9c000;
 }
 
-.marquee ul li ::after{
-    width:1px;
-    height:100%;
+.marquee ul li ::after {
+    width: 1px;
+    height: 100%;
     background: #ffffff;
-    position:absolute;
-    top:0;
-    right:0;
-} 
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 @keyframes marquee {
-    0%   { transform: translateX(320%); }
-    100% { transform: translateX(-200%); }
+    0% {
+        transform: translateX(320%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
 }
 
 /* ================================================== */
 
-.tab-container{
+.tab-container {
     width: 100%;
     height: 60px;
     background-color: #ddd;
@@ -375,12 +469,12 @@ body{
     flex-direction: column;
 }
 
-.tab-container .tab-buttons{
+.tab-container .tab-buttons {
     display: flex;
     justify-content: center;
 }
 
-.tab-buttons .tab-btn{
+.tab-buttons .tab-btn {
     font-size: 16px;
     font-weight: 500;
     border: none;
@@ -402,7 +496,8 @@ body{
     height: 3px;
     bottom: 0;
     left: 50%;
-    background-color: #022b7d; /* Change this color as desired */
+    background-color: #022b7d;
+    /* Change this color as desired */
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
