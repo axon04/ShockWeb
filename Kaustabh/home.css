@@ -9,7 +9,7 @@
 
 body{
     font-family: 'Inter';
-    background-color: #153E8C;
+    background-color: #022b7d;
 }
 
 /*================= Banner =============== */
@@ -56,7 +56,7 @@ body{
 .logo-text .main-text{
     font-size: 19px;
     font-weight: 500;
-    color: #153E8C;
+    color: #022b7d;
 }
 
 .logo-text .sub-text{
@@ -73,7 +73,7 @@ body{
 }
 
 .icons a{
-    color: #153E8C;
+    color: #022b7d;
     text-decoration: none;
     width: 36px;
     height: 36px;
@@ -86,7 +86,7 @@ body{
 
 .icons a:hover{
     /* color: white;
-    background-color: #153E8C; */
+    background-color: #022b7d; */
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
 
@@ -96,7 +96,7 @@ body{
     width: 36px;
     height: 36px;
     border-radius: 50px;
-    /* background-color: #153E8C; */
+    /* background-color: #022b7d; */
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
     display: flex;
     align-items: center;
