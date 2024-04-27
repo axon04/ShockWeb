@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: 'Montserrat';
+}
+.button{
+
+    text-align: center;
+}
+.event-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    
+}
+.event-info{
+    width:332px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin:20px;
+    padding: 10px 10px 30px;
+    transition-duration: 0.6s;
+}
+
+.event-info:hover{
+    box-shadow: 0px 2px 10px rgba(17, 17, 17, 0.2);
+}
+
+.event-info img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.event-full-details{
+    display: flex;
+}
+.event-full-details .event-date{
+    width: fit-content;
+    padding: 6px 16px;
+    margin-right: 18px;
+    border-right: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.event-full-details .event-date .month{
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+.event-full-details .event-date .date{
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #022b7d;
+}
+.event-info .event-details {
+    padding:0.5em 0.5em 0.5em 0;
+}
+.event-info .event-details .heading{
+    color: #022b7d;
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+.event-info .event-details .read-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color:#fff;
+}
+
+.event-info .event-details .event-time{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.event-info .event-details p{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 370px){
+    
+    .event-info{
+        padding: 10px;
+    }
+
+    .event-info img{
+        display: none;
+    }
+
+    .event-info .event-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .event-info .event-details p{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 370px){
+
+}
+
+@media only screen and (min-width: 600px){
+
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 992px){
+
+}
+
+@media only screen and (min-width: 1200px){
+
+}
+
+.event-info,.event-full-details{
+    opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn ease-out 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.event-date{
+    
+    animation: slide-left 2s ease-in-out;
+}
+  
