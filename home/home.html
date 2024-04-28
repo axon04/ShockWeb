@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!----------------------- Banner ------------------------>
+    <!----------------------- Banner (Updated 27-04)------------------------>
     <header>
         <div class="banner">
             <div class="left">
@@ -38,7 +38,7 @@
                         <i class="search fa fa-search"></i>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </header>
@@ -133,22 +133,14 @@
     <!---------------------- Main Body -------------------------->
     <main>
 
-        <!---------------------- Slider (NiladriC) -------------------------->
-        <div class="slider">
-            <div class="slide-wrapper">
-                <div class="slide">
-                    <img src="images/1.jpeg" alt="Image 1">
-                </div>
-                <div class="slide">
-                    <img src="images/2.jpeg" alt="Image 2">
-                </div>
-                <div class="slide">
-                    <img src="images/3.jpeg" alt="Image 3">
-                </div>
-                <!-- Add more slides as needed -->
+        <div class="slider-wrapper">
+            <div class="slider" id="slider">
+                <img id="slide-1" src="images/college-1.jpg" alt="img-1" />
+                <img id="slide-2" src="images/college-2.jpg" alt="img-2" />
+                <img id="slide-3" src="images/college-3.jpg" alt="img-3" />
             </div>
         </div>
-
+        <!---------------------- News scroller (Ananya) (modified)----------------------------->
         <div class="marquee" id="marquee">
             <ul id="list">
                 <!-- <li><h4>TECHFIESTA  || </h4></li>
@@ -168,64 +160,93 @@
                 </div>
 
                 <div class="tab-content">
-                    <div id="annoucements" class="tabcontent">Announcements content</div>
-                    <div id="events" class="tabcontent">Events content</div>
-                </div>
-                <!-- <div id="annoucements" class="tabcontent">
-                    <div class="animate">
-                        <div class="tabcontentinfo">
-                          <pre>
-                            <a href="#">TechFiesta 2k24 starting on 08 April</a>
-                            <hr>
-                            <a href="#">Refund of Caution Deposit for 2022 students</a>
-                            <hr>
-                            <a href="#">Publication of Results of the Odd Semester Examination</a>
-                            <hr>
-                            <a href="#">Rescheduled Routine of MCA 1st and 2nd Semester students</a>
-                            <hr>
-                            <a href="#">Notice on From fillup for Regular & Backlog Students for Odd Semester</a>
-                            <hr>
-                          </pre>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div id="events" class="tabcontent">
-                    <div class="animate">
-                        <div class="event-view">
-                            <div class="event-info">
-                                <img src="download.jpeg" alt="img">
-                                <h5 class="event-date">Wednesday,08th April 2024</h5>
-                                <a href="https://aotfiesta24.tech/">
-                                    <h2 style="color: blue;">TechFiesta 2k24</h2>
-                                </a>
-                                <pre>TechFiesta is back again 5Years.
-              Join us on exciting journey.</pre>
-                            </div>
-                            <div class="event-info">
-                                <img src="download (1).jpeg" alt="img">
-                                <h5 class="event-date">Friday,20th April 2024</h5>
-                                <a href="https://aotfiesta24.tech/events/ui_ux">
-                                    <h2 style="color: blue;">UXplore 2k24</h2>
-                                </a>
-                                <pre>A UX & Product Design competition,
-              Organized by AOT-ANALECTS. Parti-
-              cipate will create their own design.  
-              </pre>
+                    <!-- Announcements content -->
+                    <div id="annoucements" class="tabcontent">
+                        <!-- Scrollable container -->
+                        <div class="scroll-container">
+                            <!-- Contains all the notice stripes -->
+                            <div class="stripe-container">
+
+                                <!-- Stripe 1 -->
+                                <div class="stripe">
+                                    <div class="left">
+                                        <div class="date">
+                                            <p>Apr 26, 2024</p>
+                                        </div>
+                                        <div class="bar">.</div>
+                                        <div class="text">
+                                            <p>Submission deadline for technical report</p>
+                                        </div>
+                                    </div>
+                                    <div class="download">
+                                        <a href="#">Download</a>
+                                    </div>
+                                </div>
+
+                                <!-- Stripe 2 -->
+                                <div class="stripe">
+                                    <div class="left">
+                                        <div class="date">
+                                            <p>Apr 30, 2024</p>
+                                        </div>
+                                        <div class="bar">.</div>
+                                        <div class="text">
+                                            <p>Online classes according to Academic Routine of Saturday will be
+                                                conducted on Tuesday.</p>
+                                        </div>
+                                    </div>
+                                    <div class="download">
+                                        <a href="#">Download</a>
+                                    </div>
+                                </div>
+
+                                <!-- Stripe 3 -->
+                                <div class="stripe">
+                                    <div class="left">
+                                        <div class="date">
+                                            <p>Apr 27, 2024 </p>
+                                        </div>
+                                        <div class="bar">.</div>
+                                        <div class="text">
+                                            <p>All students are hereby notified that due to an essential seminar for
+                                                faculty members, all
+                                                classes will remain suspended from 3 PM today</p>
+                                        </div>
+                                    </div>
+                                    <div class="download">
+                                        <a href="#">Download</a>
+                                    </div>
+                                </div>
+
+                                <!-- Stripe 4 -->
+                                <div class="stripe">
+                                    <div class="left">
+                                        <div class="date">
+                                            <p>Apr 27, 2024</p>
+                                        </div>
+                                        <div class="bar">.</div>
+                                        <div class="text">
+                                            <p>Games Meet 2024: No matches till April 27, 2024. We all know that our
+                                                college authority has
+                                                decided to conduct all classes online till April 27, 2024.
+                                                Therefore, no match will be played till April 27, 2024. A revised match
+                                                schedule will be
+                                                published.
+                                                Thank you.</p>
+                                        </div>
+                                    </div>
+                                    <div class="download">
+                                        <a href="#">Download</a>
+                                    </div>
+                                </div>
 
                             </div>
-                            <div class="event-info">
-                                <img src="download (2).jpeg" alt="img">
-                                <h5 class="event-date">Wednesday,21th April 2024</h5>
-                                <a href="https://aotfiesta24.tech/gamesmeet">
-                                    <h2 style="color: blue;">Games Meet 2k24</h2>
-                                </a>
-                                <pre>Games Meet, Organized by AOT-AGILE.
-              Participates Must join this competition.
-              </pre>
-                            </div>
                         </div>
                     </div>
-                </div> -->
+
+                    <!-- Events content -->
+                    <div id="events" class="tabcontent">Events content</div>
+                </div>
             </div>
         </section>
 
@@ -234,7 +255,7 @@
     <!----------------------------- Scripts ------------------------------->
     <script defer src="nav.js"></script>
     <script defer src="home.js"></script>
-    <script defer src="slide.js"></script>
+    <script defer src="slider.js"></script>
     <script defer src="tab.js"></script>
     <script type="module" src="news.js"></script>
 </body>
