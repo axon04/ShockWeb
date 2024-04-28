@@ -12,67 +12,132 @@ body{
     background-color: #022b7d;
 }
 
-/*================= Banner =============== */
+header{
+    width: 100%;
+    height: 50px;
+}
 
 .banner{
-    background-color: white;
-    height: 8vmin;
-    width: auto;
-    padding: 0 12vmax;
+    padding: 0 23px;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.logo{
-    /* background-color: #153f8c5d; */
-    height: auto;
-    min-width: 30em;
-    padding: 6px 0;
+.banner .left{
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 2%;
 }
 
-/* .logo a{
-    text-decoration: none;
-    display: block;
-    width: 80px;
-    height: 60%;
-} */
-
-.logo img{
-    max-height: 50%;
-    min-height: 2.5rem;
-}
-
-.logo-text{
-    max-height: 50%;
-    min-height: 2.5rem;
+.banner .left .logo-text{
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 
-.logo-text .main-text{
-    font-size: 19px;
-    font-weight: 500;
+.banner .left img{
+    width: 90px; /* 60px on small devices*/
+    padding-right: 4px;
+}
+
+.banner .left .college-name{
+    font-weight: 600;
     color: #022b7d;
 }
 
-.logo-text .sub-text{
-    color: #818181;
-    font-size: 14px;
+.banner .right{
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .banner .left{
+        flex: 0 1 250px;
+    }
+
+    .banner .left img{
+        width: 60px;
+    }
+
+    .banner .left .logo-text .college-name{
+        font-size: 12px;
+        font-weight: 500px;
+    }
+
+    .banner .left .logo-text .tagline{
+        font-size: 10px;
+    }
+
+    .banner .right .icons, .banner .right .icons i{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 577px){
+    .banner .left{
+        flex: 0 1 320px;
+    }
+
+    .banner .left .logo-text .tagline{
+        font-size: 12px;
+    }
+
+    .banner .left img{
+        width: 70px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .banner{
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .banner{
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    header{
+        height: 80px;
+    }
+
+    .banner{
+        padding: 0 20%;
+    }
+
+    .banner .left{
+        flex: 0 1 400px;
+    }
+
+    .banner .left img{
+        width: 90px;
+    }
+
+    .banner .left .logo-text .college-name{
+        font-size: 18px;
+    }
+
+    .banner .left .logo-text .tagline{
+        font-size: 14px;
+    }
 }
 
 /*================= Icons =============== */
-.icons{
+.icons {
     font-size: 20px;
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.icons a{
+.icons a {
     color: #022b7d;
     text-decoration: none;
     width: 36px;
@@ -84,20 +149,20 @@ body{
     transition-duration: 0.4s;
 }
 
-.icons a:hover{
+.icons a:hover {
     /* color: white;
     background-color: #022b7d; */
     box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
 
-/*================= Icons =============== */
+/*================= Search =============== */
 
-.search-container{
+.search-container {
     width: 36px;
     height: 36px;
     border-radius: 50px;
     /* background-color: #022b7d; */
-    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -105,22 +170,25 @@ body{
     overflow: hidden;
 }
 
+.search-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
 
-
-.search-icon{
+.search-icon {
     font-size: 18px;
     font-weight: 200;
     cursor: pointer;
-    color: #444;
+    color: #022b7d;
     position: relative;
     right: 9px;
 }
 
-.search-container.active{
+.search-container.active {
     width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
 }
 
-.search-input{
+.search-input {
     position: relative;
     width: 200px;
     height: 36px;
@@ -131,7 +199,7 @@ body{
 
 }
 
-.search-input input{
+.search-input input {
     position: absolute;
     top: 0;
     width: 100%;
