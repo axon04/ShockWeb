@@ -15,7 +15,7 @@
 // console.log(marquee.style.getPropertyValue('--s'));
 
 const list = document.getElementById("list");
-fetch('./news.json')  // USE THE API URL HERE TO GET THE JSON
+fetch('./js/news.json')  // USE THE API URL HERE TO GET THE JSON
     .then((res)=>{
         return res.json();
     })

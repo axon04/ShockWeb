@@ -213,6 +213,7 @@ header{
 /*================================ Navbar Starts (NiladriC) ================================*/
 
 .navbar {
+    z-index: 1;
     overflow: hidden;
     background-color: #022b7d;
     display: flex;
