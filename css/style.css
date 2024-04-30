@@ -326,8 +326,9 @@ header{
 .burger-menu {
     display: none;
     position: relative;
-    padding: 1.5rem 2.5rem;
+    /* padding: 1.5rem 2.5rem; */
     cursor: pointer;
+    margin: 1.5rem 0rem;
 }
 
 .menu-toggle {
@@ -397,7 +398,7 @@ header{
 @media screen and (max-width: 480px) {
     .dropdown {
         display: none;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .dropdown .dropbtn {
@@ -449,7 +450,7 @@ header{
     color: #fff;
     text-shadow: 0 0 50px #000000;
     background-color: #0000004f;
-    z-index: 3;
+    /* z-index: 3; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -558,7 +559,7 @@ header{
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    top: -54px;
+    top: -58px;
     z-index: 4;
 }
 
