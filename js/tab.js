@@ -20,6 +20,6 @@ const openTab = function (instance, tab_id) {
 }
 
 window.addEventListener('load', function() {
-    const annoucements = document.getElementById("ann");
-    openTab(annoucements, 'annoucements');
+    const annoucements = document.getElementById("eve");
+    openTab(annoucements, 'events');
 });
