@@ -1,7 +1,7 @@
 /**
  * Change the slide swith delay using slideInterval
  */
-const slideInterval = 5000;
+const slideInterval = 4000;
 
 //==================================================
 
