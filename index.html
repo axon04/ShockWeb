@@ -35,13 +35,21 @@
                         <input type="text" id="search" placeholder="Search">
                     </div>
                     <div class="search-icon">
-                        <i class="search fa fa-search"></i>
+                        <i class="search fa fa-search" id="search-btn"></i>
                     </div>
                 </div>
 
             </div>
         </div>
     </header>
+
+    <!-- Search box Modal for mobile -->
+    <section class="search-modal" id="search-modal">
+        <form action="search-form">
+            <input type="text" name="" id="search-element" placeholder="Search">
+            <i class="fa-solid fa-xmark" id="search-close-btn"></i>
+        </form>
+    </section>
 
     <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
     <!-- This is navbar -->
@@ -147,6 +155,7 @@
                     Einstein</span>
             </div>
         </div>
+
         <!---------------------- News scroller (Ananya) (modified)----------------------------->
         <div class="marquee" id="marquee">
             <ul id="list">
@@ -158,8 +167,9 @@
                 <li> <h4>AOT (TEAM: BUZZ 6) BAGGED THE FIRST RANK IN THE AICTE SIH 2023 || </h4></li> -->
             </ul>
         </div>
+
         <!--------------------- Tabs - Announcements and Events (Deep) --------------------->
-        <section>
+        <!-- <section>
             <div class="tab-container">
                 <div class="tab-buttons">
                     <button class="tab-btn" onclick="openTab(this, 'events')" id="eve">EVENTS</button>
@@ -168,13 +178,11 @@
 
                 <div class="tab-content">
 
-                    <!-- Events content -->
                     <div id="events" class="tabcontent">
                         <div class="news-slider">
                             <div class="slider-wrapper">
                                 <i id="left" class="fa-solid fa-angle-left arrow"></i>
                                 <ul class="carousel">
-                                    <!-- <div class="card-wrapper"> -->
                                     <div class="card">
                                         <img src="./resources/events/arcadia.jpg">
                                         <div class="event-full-details">
@@ -193,7 +201,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- </div> -->
                                     
                                     <div class="card">
                                         <img src="./resources/events/bsketball.jpg">
@@ -276,14 +283,12 @@
                         </div>
                     </div>
 
-                    <!-- Announcements content -->
                     <div id="annoucements" class="tabcontent">
-                        <!-- Scrollable container -->
+
                         <div class="scroll-container">
-                            <!-- Contains all the notice stripes -->
+
                             <div class="stripe-container">
 
-                                <!-- Stripe 1 -->
                                 <div class="stripe">
                                     <div class="left">
                                         <div class="date">
@@ -299,7 +304,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Stripe 2 -->
                                 <div class="stripe">
                                     <div class="left">
                                         <div class="date">
@@ -316,7 +320,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Stripe 3 -->
                                 <div class="stripe">
                                     <div class="left">
                                         <div class="date">
@@ -334,7 +337,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Stripe 4 -->
                                 <div class="stripe">
                                     <div class="left">
                                         <div class="date">
@@ -362,9 +364,11 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </main>
+
+    <!-- Footer -->
 
     <footer class="footer">
         <div class="footer-wrapper">
@@ -401,6 +405,11 @@
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    
+    <div class="scroll-top">
+        <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
+    </div>
 
     <!----------------------------- Scripts ------------------------------->
     <script defer src="./js/nav.js"></script>
@@ -409,6 +418,8 @@
     <script defer src="./js/tab.js"></script>
     <script defer src="./js/event-slider.js"></script>
     <script type="module" src="./js/news.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/search-modal.js"></script>
 </body>
 
 </html>
