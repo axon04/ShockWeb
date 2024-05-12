@@ -544,7 +544,7 @@ header {
     }
 
     .slider-wrapper .slide-text span {
-        font-size: 45px;
+        font-size: 38px;
     }
 
     .slider-wrapper .slide-text .quote {
@@ -675,13 +675,22 @@ header {
     }
 }
 
+@media only screen and (max-width: 420px) {
+    .marquee {
+        line-height: 40px;
+        top: -48px;
+    }
+    .marquee ul li h4{
+        font-size: 14px;
+    }
+}
+
 /* =============== Tab system (Deep) (modified)====================== */
 
 .tab-container {
     width: 100%;
     height: 60px;
     position: relative;
-    top: -20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -727,12 +736,32 @@ header {
 }
 
 /* Announcements */
-
 .scroll-container {
-    width: 700px;
-    height: 200px;
+    margin: 35px auto;
+    width: 1100px;
+    height: 480px;
     overflow-y: scroll;
     box-shadow: 0px -7px 9px -2px #aaaaaa75 inset;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track styles */
+.scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle styles */
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #022b7d;
 }
 
 .stripe-container {
@@ -745,7 +774,7 @@ header {
 
 .stripe {
     border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -759,13 +788,13 @@ header {
 }
 
 .stripe .left .date {
-    flex: 1 0 100px;
+    flex: 1 0 110px;
     display: flex;
     align-items: center;
 }
 
 .stripe .left .text {
-    padding-right: 8px;
+    padding: 0 20px 0 10px;
 }
 
 .stripe .left .bar {
@@ -781,6 +810,14 @@ header {
 
 .stripe .download a:hover {
     text-decoration: underline;
+}
+
+.scroll-container .stripe-container .stripe,
+.scroll-container .stripe-container .stripe .left,
+.scroll-container .stripe-container .stripe .download {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn ease-out 1s forwards;
 }
 
 @media only screen and (max-width: 600px) {
@@ -836,26 +873,33 @@ header {
     }
 }
 
+@media only screen and (max-width: 420px) {
+    .scroll-container {
+        height: 400px;
+        width: 85%;
+    }
+}
+
 
 /*================================ Events starts (NiladriC) ====================*/
 
 
-.news-slider {
+
+
+.event-slider {
     display: flex;
-    padding: 0 35px;
+    padding: 25px 35px;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
-    /* min-height: 100vh; */
 }
 
-.news-slider .slider-wrapper {
+.event-wrapper {
     max-width: 1100px;
     width: 100%;
     position: relative;
 }
 
-.news-slider .slider-wrapper .arrow {
+.event-wrapper .arrow {
     z-index: 1;
     top: 50%;
     height: 50px;
@@ -872,21 +916,20 @@ header {
     transition: transform 0.1s linear;
 }
 
-.news-slider .slider-wrapper .arrow:active {
+.event-wrapper .arrow:active {
     transform: translateY(-50%) scale(0.85);
 }
 
-.news-slider .slider-wrapper .arrow:first-child {
+.event-wrapper .arrow:first-child {
     left: -22px;
 }
 
-.news-slider .slider-wrapper .arrow:last-child {
-    right: 20px;
+.event-wrapper .arrow:last-child {
+    right: -22px;
 }
 
-.news-slider .slider-wrapper .carousel {
+.event-wrapper .carousel {
     display: grid;
-    justify-items: center;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
     overflow-x: auto;
@@ -895,6 +938,7 @@ header {
     border-radius: 8px;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    padding: 15px 0;
 }
 
 .carousel::-webkit-scrollbar {
@@ -916,167 +960,34 @@ header {
 }
 
 .carousel :where(.card, .img) {
-    /* display: flex; */
-    justify-content: center;
+    display: flex;
     align-items: center;
 }
 
 .carousel .card {
     scroll-snap-align: start;
-    /* height: 342px; */
     list-style: none;
-    background: #fff;
-    /* padding-bottom: 15px; */
+    cursor: pointer;
+    padding-bottom: 15px;
     flex-direction: column;
     border-radius: 8px;
-    background-size: cover;
-    background-position: center;
-
-    /* New */
-    /* width: 350px; */
-    cursor: pointer;
     background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    margin: 20px;
-    padding: 10px 10px 30px;
     transition-duration: 0.6s;
 }
 
 .carousel .card:hover {
     box-shadow: 0px 2px 10px rgba(17, 17, 17, 0.2);
+    /* box-shadow: 0 2px 3px 0 rgba(60, 64, 67, .15), 0 6px 10px 4px rgba(60, 64, 67, .15); */
 }
 
-.carousel .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.event-full-details {
-    display: flex;
-    margin-top: 5%;
-}
-
-.event-full-details .event-date {
-    width: fit-content;
-    padding: 6px 16px;
-    margin-right: 18px;
-    border-right: 1px solid #999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.event-full-details .event-date .month {
-    font-size: 1.2em;
-    margin: 0 auto;
-}
-
-.event-full-details .event-date .date {
-    font-size: 3.5em;
-    font-weight: 600;
-    color: #022b7d;
-}
-
-.card .event-details {
-    padding: 0.5em 0.5em 0.5em 0;
-}
-
-.card .event-details .heading {
-    color: #022b7d;
-    font-weight: 700;
-    font-size: 24px;
-    display: block;
-}
-
-.card .event-details .read-btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #333;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 16px;
-    color: #fff;
-}
-
-.card .event-details .event-time {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-.card .event-details p {
-    margin-top: 10px;
-}
-
-
-@media only screen and (max-width: 992px) {
-    .event-full-details .event-date .month {
-        font-size: 1em;
-    }
-
-    .event-full-details .event-date .date {
-        font-size: 3em;
-    }
-
-    .card .event-details .heading {
-        font-size: 20px;
-    }
-
-    .card .event-details .event-time {
-        font-size: 9px;
-    }
-
-    .card .event-details p {
-        font-size: 14px;
-    }
-
-}
-
-@media only screen and (max-width: 900px) {
-    .news-slider .slider-wrapper .carousel {
-        grid-auto-columns: calc((100% / 2));
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .news-slider {
-        margin-left: 6.7%;
-    }
-
-    .news-slider .slider-wrapper .carousel {
-        grid-auto-columns: 100%;
-    }
-
-    .news-slider .slider-wrapper {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 370px) {
-    .card {
-        padding: 10px;
-    }
-
-    .card img {
-        display: none;
-    }
-
-    .card .event-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .card .event-details p {
-        display: none;
-    }
+.card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
 }
 
 .card,
-.event-full-details {
+.img,
+.event-container {
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn ease-out 1s forwards;
@@ -1089,12 +1000,142 @@ header {
     }
 }
 
-.event-date {
-    animation: slide-left 2s ease-in-out;
+
+/* Card image section */
+.carousel .card .img {
+    padding: 4%;
+}
+
+.card .img img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+
+/* Card content section */
+.card .event-container {
+    display: flex;
+}
+
+.card .event-container .event-date {
+    width: fit-content;
+    padding: 6px 20px;
+    border-right: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .event-container .event-date .event-month {
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+.card .event-container .event-date .event-day {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #022b7d;
+}
+
+.card .event-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.card .event-info .heading {
+    color: #022b7d;
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+.card .event-info .event-time {
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+}
+
+.card .event-info p {
+    margin-top: 10px;
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1024px) {
+    .event-wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    .card .event-container .event-date .event-month {
+        font-size: 16px;
+    }
+
+    .card .event-container .event-date .event-day {
+        font-size: 48px;
+    }
+
+    .card .event-info .event-title {
+        font-size: 20px;
+    }
+
+    .card .event-info .event-time {
+        font-size: 9px;
+    }
+
+    .card .event-info p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event-wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .card .event-container .event-date .event-month {
+        font-size: 14px;
+    }
+
+    .card .event-container .event-date .event-day {
+        font-size: 40px;
+    }
+
+    .card .event-info .event-title {
+        font-size: 18px;
+    }
+
+    .card .event-info .event-time {
+        font-size: 9px;
+    }
+
+    .card .event-info p {
+        font-size: 12px;
+    }
+
+    .event-wrapper .arrow {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
 }
 
 
 /*================================ Events ends (NiladriC) ======================*/
+
+
+
+/*================================ Tab change starts (NiladriC) ======================*/
+
+.unfocused {
+    display: none;
+}
+
+/*================================ Tab change ends (NiladriC) ======================*/
+
 
 
 /*================================ Footer starts (NiladriC) ======================*/
@@ -1102,7 +1143,7 @@ header {
 
 .footer {
     position: absolute;
-    top: 1600px;
+    top: 1550px;
     width: 100%;
     background-color: #022b7d;
     padding: 70px 0 20px 0;
@@ -1210,7 +1251,7 @@ ul {
 
 @media only screen and (max-width: 420px) {
     .footer {
-        top: 1200px;
+        top: 1150px;
     }
 }
 
@@ -1250,6 +1291,9 @@ ul {
     .scroll-top .top-btn {
         bottom: 3%;
         right: 6%;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
     }
 }
 

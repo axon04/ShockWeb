@@ -4,7 +4,7 @@ let mybutton = document.getElementById("top-btn");
 // When the user scrolls down 300px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
