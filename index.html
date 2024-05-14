@@ -33,23 +33,24 @@
                 </div>
 
                 <!-- Search Bar -->
-                <div class="search-container">
-                    <div class="search-input">
-                        <input type="text" id="search" placeholder="Search">
+                <form action="./search-results.html" onsubmit="return validateForm()">
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input type="text" name="search" id="searchInput1" placeholder="Search">
+                        </div>
+                        <div class="search-icon">
+                            <i class="search fa fa-search" id="search-btn"></i>
+                        </div>
                     </div>
-                    <div class="search-icon">
-                        <i class="search fa fa-search" id="search-btn"></i>
-                    </div>
-                </div>
-
+                </form>
             </div>
         </div>
     </header>
 
     <!-- Search box Modal for mobile -->
     <section class="search-modal" id="search-modal">
-        <form action="search-form">
-            <input type="text" name="" id="search-element" placeholder="Search">
+        <form action="./search-results.html" onsubmit="return validateForm()">
+            <input type="text" name="search" id="searchInput2" placeholder="Search">
             <i class="fa-solid fa-xmark" id="search-close-btn"></i>
         </form>
     </section>
@@ -359,7 +360,6 @@
     </footer>
 
     <!-- Scroll to top button -->
-
     <div class="scroll-top">
         <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
     </div>
@@ -375,6 +375,7 @@
     <script defer src="./js/search-modal.js"></script>
     <!-- <script defer src="./js/event.js"></script> -->
     <script defer src="./js/announce.js"></script>
+    <script defer src="./js/search.js"></script>
 </body>
 
 </html>

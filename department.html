@@ -10,12 +10,11 @@
 </head>
 
 <body>
-
-    <!----------------------- Banner ------------------------>
+    <!----------------------- Banner (Updated 27-04)------------------------>
     <header>
         <div class="banner">
             <div class="left">
-                <img src="resources/images/Logo-small.png" alt="logo">
+                <img src="./resources/images/Logo-small.png" alt="logo">
                 <div class="logo-text">
                     <div class="college-name">ACADEMY OF TECHNOLOGY</div>
                     <div class="tagline">Translate your vision into reality</div>
@@ -23,26 +22,38 @@
             </div>
             <div class="right">
                 <div class="icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
                 </div>
 
                 <!-- Search Bar -->
-                <div class="search-container">
-                    <div class="search-input">
-                        <input type="text" id="search" placeholder="Search">
+                <form action="./search-results.html" onsubmit="return validateForm()">
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input type="text" name="search" id="searchInput1" placeholder="Search">
+                        </div>
+                        <div class="search-icon">
+                            <i class="search fa fa-search" id="search-btn"></i>
+                        </div>
                     </div>
-                    <div class="search-icon">
-                        <i class="search fa fa-search"></i>
-                    </div>
-                </div>
-
+                </form>
             </div>
         </div>
     </header>
 
-    <!---------------------- Navbar -------------------------->
+    <!-- Search box Modal for mobile -->
+    <section class="search-modal" id="search-modal">
+        <form action="./search-results.html" onsubmit="return validateForm()">
+            <input type="text" name="search" id="searchInput2" placeholder="Search">
+            <i class="fa-solid fa-xmark" id="search-close-btn"></i>
+        </form>
+    </section>
+
+    <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
+    <!-- This is navbar -->
     <nav>
         <div class="navbar">
 
@@ -60,7 +71,7 @@
                     <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
                 </button>
                 <div class="dropdown-content" id="dropdown-academics">
-                    <a href="#">Department</a>
+                    <a href="./department.html">Department</a>
 
                     <a href="#" onclick="toggleSubDropdownMenu(event)">UG Programs
                         <i class="fa-solid fa-angle-right"></i>
@@ -135,7 +146,11 @@
                 <span>Department of</span>
                 <p>Computer Science and Engineering</p>
                 <div class="subtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
                 </div>
             </div>
 
@@ -144,7 +159,7 @@
                 <div class="slider-wrapper">
                     <i id="left" class="fa-solid fa-angle-left"></i>
                     <ul class="carousel">
-                        
+
                         <!-- Card -->
                         <div class="card" style="background-image: url('resources/images/1.jpg');">
                             <div class="card-content">
@@ -210,7 +225,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section>
             <div class="events-heading">
                 <p>Events</p>
@@ -226,7 +241,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -238,7 +254,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -250,7 +267,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -262,7 +280,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -274,7 +293,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -286,7 +306,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -298,7 +319,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -310,7 +332,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                     <!-- Event card -->
@@ -322,7 +345,8 @@
                         <div class="details">
                             <div class="event-name">Event Name</div>
                             <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
-                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis</p>
+                            <p>Lorem ipsum dolorRepudiandae odio qui, dolores eligend nesciunt. Sit aperiam veritatis
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -427,10 +451,11 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-wrapper">
             <div class="row">
@@ -454,9 +479,12 @@
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aotconnect/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -466,10 +494,18 @@
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    <div class="scroll-top">
+        <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
+    </div>
+
     <!----------------------------- Scripts ------------------------------->
     <script defer src="js/home.js"></script>
     <script defer src="js/nav.js"></script>
     <script defer src="js/news-slider.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/search-modal.js"></script>
+    <script defer src="./js/search.js"></script>
 
 </body>
 

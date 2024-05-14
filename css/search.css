@@ -262,7 +262,7 @@ header {
 /*================================ Navbar Starts (NiladriC) ================================*/
 
 .navbar {
-    z-index: 1;
+    /* position: sticky; */
     overflow: hidden;
     background-color: #022b7d;
     display: flex;
@@ -471,364 +471,74 @@ header {
 /*================================ Navbar Ends (NiladriC) ================================*/
 
 
-/*================================ Page heading ================================*/
-.dept-heading {
-    text-align: center;
-    margin: 4% 0;
+/*================================= Search Results Container starts ============================*/
+
+.search-header{
+    padding: 30px 25% 20px 25%;
+    font-size: 30px;
+    font-weight: 500;
 }
 
-.dept-heading span {
-    font-size: 24px;
-    font-weight: 300;
+.search-results-container{
+    margin: 0 25% 5% 25%;
 }
 
-.dept-heading p {
-    font-size: 50px;
-    font-weight: 700;
-    color: #022b7d;
-}
-
-.dept-heading .subtext {
-    width: 55%;
-    text-align: justify;
-    font-size: 14px;
-    margin: 0 auto;
-}
-
-/*================================ News Slider (Devanjana) (Niladri) ================================*/
-.news-slider {
-    display: flex;
-    padding: 0 35px;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider-wrapper {
-    max-width: 1100px;
-    width: 100%;
-    position: relative;
-}
-
-.slider-wrapper i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-}
-
-.slider-wrapper i:active {
-    transform: translateY(-50%) scale(0.85);
-}
-
-.slider-wrapper i:first-child {
-    left: -22px;
-}
-
-.slider-wrapper i:last-child {
-    right: -22px;
-}
-
-.slider-wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
-    --webkit-user-select: none;
-}
-
-.carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .card {
-    scroll-snap-align: start;
-    height: 342px;
-    list-style: none;
-    background: #fff;
-    /* cursor: pointer; */
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center;
-}
-
-.carousel .card .card-content {
-    margin: auto auto 20px 20px;
-}
-
-.carousel .card .read-more {
-    width: 50%;
-    border-radius: 10px;
-    display: flex;
-    background: rgba(0, 0, 0, 0.6);
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.carousel .card .read-more:hover {
-    background-color: #022b7d;
-    transform: scale(1.1);
-}
-
-.carousel .card .read-more a {
+.search-results-container a{
     text-decoration: none;
-    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
-}
-
-.carousel .card span {
-    color: #6A6D78;
-    font-size: 1.31rem;
-}
-
-
-
-@media screen and (max-width: 900px) {
-    .slider-wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .slider-wrapper .carousel {
-        grid-auto-columns: 100%;
-    }
-}
-
-
-/*======================= Events ===============================*/
-
-.events-heading {
-    margin-top: 50px;
-}
-.events-heading p {
-    font-size: 40px;
-    font-weight: 600;
-    padding: 0 25%;
-}
-
-.events-notice-container {
-    display: flex;
-    justify-content: center;
-}
-
-.events-container {
-    width: 600px;
-}
-
-.events-container .event-card {
-    display: flex;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin: 20px;
-    padding: 10px 10px;
-}
-
-.events-container .event-card .event-date {
-    width: fit-content;
-    padding: 6px 16px;
-    margin-right: 18px;
-    border-right: 1px solid #999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.events-container .event-card .event-date .month {
-    font-size: 1.2em;
-    margin: 0 auto;
-}
-
-.events-container .event-card .event-date .date {
-    font-size: 3.5em;
-    font-weight: 600;
-    color: #022b7d;
-}
-
-.events-container .event-card .details {
-    padding: 0.5em 0.5em 0.5em 0;
-}
-
-.events-container .event-card .details .event-name {
-    color: #022b7d;
-    font-weight: 700;
-    font-size: 24px;
-    display: block;
-}
-
-.events-container .event-card .details .event-timing {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-.events-container .event-card .details p{
-    margin-top: 10px;
-}
-
-.notice-container {
-    position: sticky;
-    /* align-self: flex-start; */
-    top: 20vh;
-    margin: 20px;
-    width: 400px;
-    height: 600px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px, rgba(0, 0, 0, 0.04) 0px -10px 22px -6px;
-    border: 1px solid #fdfdfd;
-    border-radius: 10px;    
-    overflow: hidden;
-}
-
-.notice-container .notice-heading {
-    padding-left: 20px;
-    padding-top: 6px;
-    margin: 10px 0;
-}
-.notice-container .notice-heading p{
-    font-size: 24px;
-    font-weight: 500;
-    color: #022b7d;
-}
-
-
-.scroll-container{
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #f1f1f1;
-    height: 90%;
-}
-
-.stripe-container{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%; /* Change this for container width */
-}
-
-.stripe{
+.search-results-container .strip{
+    margin: 4px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
-    padding: 15px;
-    display: block;
-}
-
-.stripe .left{
-    display: block;
-}
-
-.stripe .left .date{
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 3px;
-    font-weight: 600;
-}
-
-.stripe .left .text{
-    padding-right: 0;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.stripe .left .bar{
-    display: none;
-}
-
-.stripe .download a{
-    color: #022b7d;
-    text-decoration: none;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 4px;
+    gap: 4px;
+    flex-direction: column;
 }
 
-.stripe .download a:hover{
-    text-decoration: underline;
+.search-results-container .strip .subtext .date,
+.search-results-container .strip .subtext .type{
+    font-size: 12px;
+    font-weight: 300;
+    color: #888;
+    margin-right: 8px;
 }
 
-@media only screen and (max-width: 600px){
-    .stripe{
-        border-bottom: 1px solid #f0f0f0;
-        padding: 15px;
-        display: block;
-    }
+@media only screen and (max-width: 768px) {
     
-    .stripe .left{
-        display: block;
+    .search-results-container{
+        margin: 0 5%;
     }
 
-    .stripe .left .date{
-        font-size: 14px;
-        color: #444;
-        margin-bottom: 3px;
-        font-weight: 600;
-    }
-
-    .stripe .left .bar{
-        display: none;
-    }
-
-    .stripe .left .text{
-        padding-right: 0;
-        margin-bottom: 8px;
+    .search-results-container a{
         font-size: 14px;
     }
-
-    .stripe .download{
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 4px;
-    }
-
 }
+@media only screen and (max-width: 1400px) {
+    .search-results-container{
+        margin: 0 12% 10%;
+    }
+    .search-header{
+        padding: 20px 10% 10px 10%;
+    }
+    .search-results-container a{
+        font-size: 16px;
+    }
+}
+
+
+/*================================= Search Results Container ends ============================*/
+
 
 /*================================ Footer starts (NiladriC) ======================*/
 
 
 .footer {
-    /* position: absolute; */
-    /* top: 1550px; */
+    position: relative;
+    /* bottom: 0; */
+    /* line-height: 0; */
     width: 100%;
     background-color: #022b7d;
     padding: 70px 0 20px 0;
@@ -936,7 +646,7 @@ ul {
 
 @media only screen and (max-width: 420px) {
     .footer {
-        top: 1150px;
+        /* top: 1150px; */
     }
 }
 
