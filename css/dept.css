@@ -495,6 +495,118 @@ header {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 400px) {
+
+    .dept-heading span {
+        font-size: 14px;
+    }
+    
+    .dept-heading p {
+        font-size: 22px;
+    }
+
+    .dept-heading .subtext {
+        width: 75%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 401px) {
+    .dept-heading span {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    
+    .dept-heading p {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 auto 2%;
+        width: 90%;
+    }
+
+    .dept-heading .subtext {
+        width: 85%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .dept-heading span {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .dept-heading p {
+        font-size: 26px;
+        margin: 0 auto 2%;
+        width: 80%;
+    }
+
+    .dept-heading .subtext {
+        width: 85%;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dept-heading span {
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    .dept-heading p {
+        font-size: 30px;
+        margin: 0 auto 2%;
+        width: 80%;
+    }
+
+    .dept-heading .subtext {
+        width: 85%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .dept-heading p {
+        font-size: 40px;
+        margin: 0 auto 2%;
+        width: 80%;
+    }
+
+    .dept-heading .subtext {
+        width: 85%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .dept-heading p {
+        font-size: 50px;
+        margin: 0 auto 2%;
+        width: 80%;
+    }
+
+    .dept-heading .subtext {
+        width: 75%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    
+    .dept-heading p {
+        font-size: 50px;
+        margin: 0 auto 2%;
+        width: 80%;
+    }
+
+    .dept-heading .subtext {
+        width: 65%;
+    }
+}
+
 /*================================ News Slider (Devanjana) (Niladri) ================================*/
 .news-slider {
     display: flex;
@@ -588,7 +700,15 @@ header {
 }
 
 .carousel .card .card-content {
-    margin: auto auto 20px 20px;
+    /* margin: auto auto 20px 20px; */
+    margin: auto 0 5px;
+    padding: 0 1.5em;
+    background: #00000083;
+    height: 6em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .carousel .card .read-more {
@@ -612,16 +732,20 @@ header {
     text-decoration: none;
     color: #fff;
 }
-
+/* 
 .carousel .card h2 {
     font-weight: 500;
     font-size: 1.56rem;
     margin: 30px 0 5px;
-}
+} */
 
 .carousel .card span {
-    color: #6A6D78;
-    font-size: 1.31rem;
+    /* color: #6A6D78; */
+    /* font-size: 1.31rem; */
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    
 }
 
 
@@ -648,11 +772,14 @@ header {
     font-size: 40px;
     font-weight: 600;
     padding: 0 25%;
+    color: #022b7d;
 }
 
 .events-notice-container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
 }
 
 .events-container {
@@ -662,7 +789,9 @@ header {
 .events-container .event-card {
     display: flex;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
+    box-shadow: rgba(0, 0, 0, 0.164) 0px 5px 25px -5px;
+    border: 1px solid #fdfdfd;
     margin: 20px;
     padding: 10px 10px;
 }
@@ -707,6 +836,7 @@ header {
 
 .events-container .event-card .details p{
     margin-top: 10px;
+    font-size: 16px;
 }
 
 .notice-container {
@@ -787,7 +917,7 @@ header {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .stripe{
         border-bottom: 1px solid #f0f0f0;
         padding: 15px;
@@ -822,6 +952,153 @@ header {
     }
 
 }
+
+@media only screen and (min-width: 576px) {
+    .stripe{
+        padding: 20px 30px;
+    }
+}
+
+/* media queries for events-notice-container */
+@media only screen and (max-width: 768px) {
+    .events-heading {
+        text-align: center;
+    }
+
+    .events-heading p{
+        font-size: 21px;
+    }
+
+    .events-notice-container {
+        flex-direction: column;
+    }
+
+    .events-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .events-container .event-card .event-date .month {
+        font-size: 1em;
+    }
+    
+    .events-container .event-card .event-date .date {
+        font-size: 3em;
+    }
+    
+    .events-container .event-card .details .event-name {
+        font-size: 20px;
+    }
+    
+    .events-container .event-card .details .event-timing {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .events-container .event-card .details p{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .notice-container{
+        width: 100%;
+        margin: 0;
+        margin-top: 4%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .notice-container .notice-heading {
+        text-align: center;
+        padding: 0;
+    }
+
+    .notice-container .notice-heading p{
+        font-size: 26px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .events-heading p{
+        font-size: 30px;
+        font-weight: 500;
+        padding: 0 14%;
+    }
+
+    .events-container .event-card .event-date .month {
+        font-size: 1em;
+    }
+    
+    .events-container .event-card .event-date .date {
+        font-size: 3em;
+    }
+    
+    .events-container .event-card .details .event-name {
+        font-size: 20px;
+    }
+    
+    .events-container .event-card .details .event-timing {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .events-container .event-card .details p{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .events-heading p{
+        font-size: 40px;
+        font-weight: 600;
+        padding: 0 15%;
+    }
+
+    .events-notice-container {
+        flex-direction: row;
+    }
+
+    .events-container {
+        width: 800px;
+    }
+    
+    .events-container .event-card .event-date .month {
+        font-size: 1.2em;
+    }
+    
+    .events-container .event-card .event-date .date {
+        font-size: 3.5em;
+    }
+    
+    .events-container .event-card .details .event-name {
+        font-size: 24px;
+    }
+    
+    .events-container .event-card .details .event-timing {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .events-container .event-card .details p{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .notice-container{
+        position: sticky;
+        top: 20vh;
+        margin: 20px;
+        width: 400px;
+        height: 600px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px, rgba(0, 0, 0, 0.04) 0px -10px 22px -6px;
+        border: 1px solid #fdfdfd;
+        border-radius: 10px;    
+        overflow: hidden;
+    }
+}
+
 
 /*================================ Footer starts (NiladriC) ======================*/
 

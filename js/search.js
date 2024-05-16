@@ -80,7 +80,7 @@ function fetchData(url, type){
                     </a>
                     <div class="subtext">
                         <span class="date">${formatDate(record.date)}</span>
-                        <span class="type">${type}</span>
+                        <span class="type ${type}">${type}</span>
                     </div>`;
                 container.appendChild(strip);
             }
