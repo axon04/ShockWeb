@@ -507,11 +507,13 @@ header {
     
     .dept-heading p {
         font-size: 22px;
+        margin: 20px;
     }
 
     .dept-heading .subtext {
         width: 75%;
         font-size: 12px;
+        margin: 20px auto;
     }
 }
 
@@ -764,6 +766,15 @@ header {
     .slider-wrapper .carousel {
         grid-auto-columns: 100%;
     }
+}
+
+@media screen and (max-width: 420px) {
+    .slider-wrapper i {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+    
 }
 
 
