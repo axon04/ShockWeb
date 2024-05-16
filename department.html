@@ -13,7 +13,7 @@
     <!----------------------- Banner (Updated 27-04)------------------------>
     <header>
         <div class="banner">
-            <div class="left">
+            <div class="left" id="indexLink">
                 <img src="./resources/images/Logo-small.png" alt="logo">
                 <div class="logo-text">
                     <div class="college-name">ACADEMY OF TECHNOLOGY</div>
@@ -66,15 +66,14 @@
             </div>
 
             <div class="dropdown">
-                <button class="dropbtn"
-                    onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
                     <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
                 </button>
                 <div class="dropdown-content" id="dropdown-academics">
-                    <a href="./department.html">Department</a>
+                    <a href="#">Department</a>
 
-                    <a href="#" onclick="toggleSubDropdownMenu(event)">UG Programs
-                        <i class="fa-solid fa-angle-right"></i>
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">UG Programs
+                        <i class="fa-solid fas fa-angle-down"></i>
                     </a>
                     <div class="dropdown-sub-content" id="ug-program-submenu">
                         <a href="#">PG Programs</a>
@@ -83,16 +82,16 @@
                         <a href="#">Curriculum</a>
                     </div>
 
-                    <a href="#" onclick="toggleSubDropdownMenu(event)">Resources
-                        <i class="fa-solid fa-angle-right"></i>
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Resources
+                        <i class="fa-solid fas fa-angle-down"></i>
                     </a>
                     <div class="dropdown-sub-content" id="resources-submenu">
                         <a href="#">Library</a>
                         <a href="#">Moodle</a>
                     </div>
 
-                    <a href="#" onclick="toggleSubDropdownMenu(event)">Admissions
-                        <i class="fa-solid fa-angle-right"></i>
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Admissions
+                        <i class="fa-solid fas fa-angle-down"></i>
                     </a>
                     <div class="dropdown-sub-content" id="admissions-submenu">
                         <a href="#">UG Admission</a>
@@ -426,6 +425,7 @@
     </div>
 
     <!----------------------------- Scripts ------------------------------->
+    <script defer src="./js/redirect.js"></script>
     <script defer src="js/home.js"></script>
     <script defer src="js/nav.js"></script>
     <script defer src="js/news-slider.js"></script>

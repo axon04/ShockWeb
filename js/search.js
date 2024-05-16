@@ -58,7 +58,7 @@ function fetchData(url, type){
     })
     // Perform search
     .then(data => {
-        console.log(data);
+        // console.log(data);
         // Get the value to search from the URL
         const word = urlParams.get('search');
         // Use a regex for searching (case insensitive)

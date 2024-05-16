@@ -20,7 +20,7 @@ fetch('./js/news.json')  // USE THE API URL HERE TO GET THE JSON
         return res.json();
     })
     .then((data) =>{
-        console.log(data);
+        // console.log(data);
         // Creating <li> for each entry of JSON
         data.forEach(element => {       
             const link = document.createElement('li');
